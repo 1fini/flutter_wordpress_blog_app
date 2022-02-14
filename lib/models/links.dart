@@ -53,31 +53,31 @@ class Links {
     if (json['replies'] != null) {
       replies = [];
       json['replies'].forEach((v) {
-        replies?.add(new Replies.fromJson(v));
+        replies?.add(Replies.fromJson(v));
       });
     }
     if (json['archives'] != null) {
       archives = [];
       json['archives'].forEach((v) {
-        archives?.add(new Archives.fromJson(v));
+        archives?.add(Archives.fromJson(v));
       });
     }
     if (json['version-history'] != null) {
       versionHistory = [];
       json['version-history'].forEach((v) {
-        versionHistory?.add(new VersionHistory.fromJson(v));
+        versionHistory?.add(VersionHistory.fromJson(v));
       });
     }
     if (json['wp:post_type'] != null) {
       wpPostType = [];
       json['wp:post_type'].forEach((v) {
-        wpPostType?.add(new WpPostType.fromJson(v));
+        wpPostType?.add(WpPostType.fromJson(v));
       });
     }
     if (json['predecessor-version'] != null) {
       predecessorVersion = [];
       json['predecessor-version'].forEach((v) {
-        predecessorVersion?.add(new PredecessorVersion.fromJson(v));
+        predecessorVersion?.add(PredecessorVersion.fromJson(v));
       });
     }
     if (json['wp:featuredmedia'] != null) {
@@ -101,122 +101,119 @@ class Links {
     if (json['wp:action-publish'] != null) {
       wpActionPublish = [];
       json['wp:action-publish'].forEach((v) {
-        wpActionPublish?.add(new WpActionPublish.fromJson(v));
+        wpActionPublish?.add(WpActionPublish.fromJson(v));
       });
     }
     if (json['wp:action-unfiltered-html'] != null) {
       wpActionUnfilteredHtml = [];
       json['wp:action-unfiltered-html'].forEach((v) {
-        wpActionUnfilteredHtml?.add(new WpActionUnfilteredHtml.fromJson(v));
+        wpActionUnfilteredHtml?.add(WpActionUnfilteredHtml.fromJson(v));
       });
     }
     if (json['wp:action-sticky'] != null) {
       wpActionSticky = [];
       json['wp:action-sticky'].forEach((v) {
-        wpActionSticky?.add(new WpActionSticky.fromJson(v));
+        wpActionSticky?.add(WpActionSticky.fromJson(v));
       });
     }
     if (json['wp:action-assign-author'] != null) {
       wpActionAssignAuthor = [];
       json['wp:action-assign-author'].forEach((v) {
-        wpActionAssignAuthor?.add(new WpActionAssignAuthor.fromJson(v));
+        wpActionAssignAuthor?.add(WpActionAssignAuthor.fromJson(v));
       });
     }
     if (json['wp:action-create-categories'] != null) {
       wpActionCreateCategories = [];
       json['wp:action-create-categories'].forEach((v) {
-        wpActionCreateCategories?.add(new WpActionCreateCategories.fromJson(v));
+        wpActionCreateCategories?.add(WpActionCreateCategories.fromJson(v));
       });
     }
     if (json['wp:action-assign-categories'] != null) {
       wpActionAssignCategories = [];
       json['wp:action-assign-categories'].forEach((v) {
-        wpActionAssignCategories?.add(new WpActionAssignCategories.fromJson(v));
+        wpActionAssignCategories?.add(WpActionAssignCategories.fromJson(v));
       });
     }
     if (json['wp:action-create-tags'] != null) {
       wpActionCreateTags = [];
       json['wp:action-create-tags'].forEach((v) {
-        wpActionCreateTags?.add(new WpActionCreateTags.fromJson(v));
+        wpActionCreateTags?.add(WpActionCreateTags.fromJson(v));
       });
     }
     if (json['wp:action-assign-tags'] != null) {
       wpActionAssignTags = [];
       json['wp:action-assign-tags'].forEach((v) {
-        wpActionAssignTags?.add(new WpActionAssignTags.fromJson(v));
+        wpActionAssignTags?.add(WpActionAssignTags.fromJson(v));
       });
     }
     if (json['wp:items'] != null) {
       wpItems = [];
       json['wp:items'].forEach((v) {
-        wpItems?.add(new WpItems.fromJson(v));
+        wpItems?.add(WpItems.fromJson(v));
       });
     }
     if (json['up'] != null) {
       up = [];
       json['up'].forEach((v) {
-        up?.add(new Up.fromJson(v));
+        up?.add(Up.fromJson(v));
       });
     }
     if (json['in-reply-to'] != null) {
       inReplyTo = [];
       json['in-reply-to'].forEach((v) {
-        inReplyTo?.add(new InReplyTo.fromJson(v));
+        inReplyTo?.add(InReplyTo.fromJson(v));
       });
     }
     if (json['children'] != null) {
       children = [];
       json['children'].forEach((v) {
-        children?.add(new Children.fromJson(v));
+        children?.add(Children.fromJson(v));
       });
     }
     if (json['curies'] != null) {
       curies = [];
       json['curies'].forEach((v) {
-        curies?.add(new Curies.fromJson(v));
+        curies?.add(Curies.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
 
-    data['self'] = this.self?.map((v) => v.toJson()).toList();
-    data['collection'] = this.collection?.map((v) => v.toJson()).toList();
-    data['about'] = this.about?.map((v) => v.toJson()).toList();
-    data['author'] = this.author?.map((v) => v.toJson()).toList();
-    data['replies'] = this.replies?.map((v) => v.toJson()).toList();
-    data['archives'] = this.archives?.map((v) => v.toJson()).toList();
-    data['version-history'] =
-        this.versionHistory?.map((v) => v.toJson()).toList();
-    data['wp:post_type'] = this.wpPostType?.map((v) => v.toJson()).toList();
+    data['self'] = self?.map((v) => v.toJson()).toList();
+    data['collection'] = collection?.map((v) => v.toJson()).toList();
+    data['about'] = about?.map((v) => v.toJson()).toList();
+    data['author'] = author?.map((v) => v.toJson()).toList();
+    data['replies'] = replies?.map((v) => v.toJson()).toList();
+    data['archives'] = archives?.map((v) => v.toJson()).toList();
+    data['version-history'] = versionHistory?.map((v) => v.toJson()).toList();
+    data['wp:post_type'] = wpPostType?.map((v) => v.toJson()).toList();
     data['predecessor-version'] =
-        this.predecessorVersion?.map((v) => v.toJson()).toList();
-    data['wp:featuredmedia'] =
-        this.wpFeaturedmedia?.map((v) => v.toJson()).toList();
-    data['wp:attachment'] = this.wpAttachment?.map((v) => v.toJson()).toList();
-    data['wp:term'] = this.wpTerm?.map((v) => v.toJson()).toList();
+        predecessorVersion?.map((v) => v.toJson()).toList();
+    data['wp:featuredmedia'] = wpFeaturedmedia?.map((v) => v.toJson()).toList();
+    data['wp:attachment'] = wpAttachment?.map((v) => v.toJson()).toList();
+    data['wp:term'] = wpTerm?.map((v) => v.toJson()).toList();
     data['wp:action-publish'] =
-        this.wpActionPublish?.map((v) => v.toJson()).toList();
+        wpActionPublish?.map((v) => v.toJson()).toList();
     data['wp:action-unfiltered-html'] =
-        this.wpActionUnfilteredHtml?.map((v) => v.toJson()).toList();
-    data['wp:action-sticky'] =
-        this.wpActionSticky?.map((v) => v.toJson()).toList();
+        wpActionUnfilteredHtml?.map((v) => v.toJson()).toList();
+    data['wp:action-sticky'] = wpActionSticky?.map((v) => v.toJson()).toList();
     data['wp:action-assign-author'] =
-        this.wpActionAssignAuthor?.map((v) => v.toJson()).toList();
+        wpActionAssignAuthor?.map((v) => v.toJson()).toList();
     data['wp:action-create-categories'] =
-        this.wpActionCreateCategories?.map((v) => v.toJson()).toList();
+        wpActionCreateCategories?.map((v) => v.toJson()).toList();
     data['wp:action-assign-categories'] =
-        this.wpActionAssignCategories?.map((v) => v.toJson()).toList();
+        wpActionAssignCategories?.map((v) => v.toJson()).toList();
     data['wp:action-create-tags'] =
-        this.wpActionCreateTags?.map((v) => v.toJson()).toList();
+        wpActionCreateTags?.map((v) => v.toJson()).toList();
     data['wp:action-assign-tags'] =
-        this.wpActionAssignTags?.map((v) => v.toJson()).toList();
-    data['wp:items'] = this.wpItems?.map((v) => v.toJson()).toList();
-    data['up'] = this.up?.map((v) => v.toJson()).toList();
-    data['in-reply-to'] = this.inReplyTo?.map((v) => v.toJson()).toList();
-    data['children'] = this.children?.map((v) => v.toJson()).toList();
-    data['curies'] = this.curies?.map((v) => v.toJson()).toList();
+        wpActionAssignTags?.map((v) => v.toJson()).toList();
+    data['wp:items'] = wpItems?.map((v) => v.toJson()).toList();
+    data['up'] = up?.map((v) => v.toJson()).toList();
+    data['in-reply-to'] = inReplyTo?.map((v) => v.toJson()).toList();
+    data['children'] = children?.map((v) => v.toJson()).toList();
+    data['curies'] = curies?.map((v) => v.toJson()).toList();
 
     return data;
   }
@@ -232,9 +229,9 @@ class Self {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.href != null) {
-      data['href'] = this.href;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (href != null) {
+      data['href'] = href;
     }
     return data;
   }
@@ -250,9 +247,9 @@ class Collection {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.href != null) {
-      data['href'] = this.href;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (href != null) {
+      data['href'] = href;
     }
     return data;
   }
@@ -268,9 +265,9 @@ class About {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.href != null) {
-      data['href'] = this.href;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (href != null) {
+      data['href'] = href;
     }
     return data;
   }
@@ -291,12 +288,12 @@ class Author {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.embeddable != null) {
-      data['embeddable'] = this.embeddable;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (embeddable != null) {
+      data['embeddable'] = embeddable;
     }
-    if (this.href != null) {
-      data['href'] = this.href;
+    if (href != null) {
+      data['href'] = href;
     }
     return data;
   }
@@ -317,12 +314,12 @@ class Replies {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.embeddable != null) {
-      data['embeddable'] = this.embeddable;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (embeddable != null) {
+      data['embeddable'] = embeddable;
     }
-    if (this.href != null) {
-      data['href'] = this.href;
+    if (href != null) {
+      data['href'] = href;
     }
     return data;
   }
@@ -338,9 +335,9 @@ class Archives {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.href != null) {
-      data['href'] = this.href;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (href != null) {
+      data['href'] = href;
     }
     return data;
   }
@@ -361,12 +358,12 @@ class VersionHistory {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.count != null) {
-      data['count'] = this.count;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (count != null) {
+      data['count'] = count;
     }
-    if (this.href != null) {
-      data['href'] = this.href;
+    if (href != null) {
+      data['href'] = href;
     }
     return data;
   }
@@ -382,9 +379,9 @@ class WpPostType {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.href != null) {
-      data['href'] = this.href;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (href != null) {
+      data['href'] = href;
     }
     return data;
   }
@@ -405,13 +402,13 @@ class PredecessorVersion {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
 
-    if (this.id != null) {
-      data['id'] = this.id;
+    if (id != null) {
+      data['id'] = id;
     }
-    if (this.href != null) {
-      data['href'] = this.href;
+    if (href != null) {
+      data['href'] = href;
     }
     return data;
   }
@@ -432,12 +429,12 @@ class WpFeaturedmedia {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.embeddable != null) {
-      data['embeddable'] = this.embeddable;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (embeddable != null) {
+      data['embeddable'] = embeddable;
     }
-    if (this.href != null) {
-      data['href'] = this.href;
+    if (href != null) {
+      data['href'] = href;
     }
     return data;
   }
@@ -453,9 +450,9 @@ class WpAttachment {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.href != null) {
-      data['href'] = this.href;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (href != null) {
+      data['href'] = href;
     }
     return data;
   }
@@ -479,15 +476,15 @@ class WpTerm {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.taxonomy != null) {
-      data['taxonomy'] = this.taxonomy;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (taxonomy != null) {
+      data['taxonomy'] = taxonomy;
     }
-    if (this.embeddable != null) {
-      data['embeddable'] = this.embeddable;
+    if (embeddable != null) {
+      data['embeddable'] = embeddable;
     }
-    if (this.href != null) {
-      data['href'] = this.href;
+    if (href != null) {
+      data['href'] = href;
     }
     return data;
   }
@@ -503,9 +500,9 @@ class WpActionPublish {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.href != null) {
-      data['href'] = this.href;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (href != null) {
+      data['href'] = href;
     }
     return data;
   }
@@ -521,9 +518,9 @@ class WpActionUnfilteredHtml {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.href != null) {
-      data['href'] = this.href;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (href != null) {
+      data['href'] = href;
     }
     return data;
   }
@@ -539,9 +536,9 @@ class WpActionSticky {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.href != null) {
-      data['href'] = this.href;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (href != null) {
+      data['href'] = href;
     }
     return data;
   }
@@ -557,9 +554,9 @@ class WpActionAssignAuthor {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.href != null) {
-      data['href'] = this.href;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (href != null) {
+      data['href'] = href;
     }
     return data;
   }
@@ -575,9 +572,9 @@ class WpActionCreateCategories {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.href != null) {
-      data['href'] = this.href;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (href != null) {
+      data['href'] = href;
     }
     return data;
   }
@@ -593,9 +590,9 @@ class WpActionAssignCategories {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.href != null) {
-      data['href'] = this.href;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (href != null) {
+      data['href'] = href;
     }
     return data;
   }
@@ -611,9 +608,9 @@ class WpActionCreateTags {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.href != null) {
-      data['href'] = this.href;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (href != null) {
+      data['href'] = href;
     }
     return data;
   }
@@ -629,9 +626,9 @@ class WpActionAssignTags {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.href != null) {
-      data['href'] = this.href;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (href != null) {
+      data['href'] = href;
     }
     return data;
   }
@@ -647,9 +644,9 @@ class WpItems {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.href != null) {
-      data['href'] = this.href;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (href != null) {
+      data['href'] = href;
     }
     return data;
   }
@@ -673,15 +670,15 @@ class Up {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.embeddable != null) {
-      data['embeddable'] = this.embeddable;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (embeddable != null) {
+      data['embeddable'] = embeddable;
     }
-    if (this.postType != null) {
-      data['post_type'] = this.postType;
+    if (postType != null) {
+      data['post_type'] = postType;
     }
-    if (this.href != null) {
-      data['href'] = this.href;
+    if (href != null) {
+      data['href'] = href;
     }
     return data;
   }
@@ -702,12 +699,12 @@ class InReplyTo {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.embeddable != null) {
-      data['embeddable'] = this.embeddable;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (embeddable != null) {
+      data['embeddable'] = embeddable;
     }
-    if (this.href != null) {
-      data['href'] = this.href;
+    if (href != null) {
+      data['href'] = href;
     }
     return data;
   }
@@ -723,9 +720,9 @@ class Children {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.href != null) {
-      data['href'] = this.href;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (href != null) {
+      data['href'] = href;
     }
     return data;
   }
@@ -749,15 +746,15 @@ class Curies {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.name != null) {
-      data['name'] = this.name;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (name != null) {
+      data['name'] = name;
     }
-    if (this.href != null) {
-      data['href'] = this.href;
+    if (href != null) {
+      data['href'] = href;
     }
-    if (this.templated != null) {
-      data['templated'] = this.templated;
+    if (templated != null) {
+      data['templated'] = templated;
     }
     return data;
   }
