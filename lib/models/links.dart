@@ -1,3 +1,9 @@
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+import 'package:flutter/foundation.dart';
+//import 'package:pi_blog_app/models/post_types.dart';
+import 'package:pi_blog_app/models/attachment.dart';
+
 class Links {
   List<Self>? self;
   List<Collection>? collection;
@@ -442,11 +448,13 @@ class WpFeaturedmedia {
 
 class WpAttachment {
   String? href;
+  // Attachment? attachment;
 
   WpAttachment({this.href});
 
   WpAttachment.fromJson(Map<String, dynamic> json) {
     href = json['href'];
+    // attachment ;
   }
 
   Map<String, dynamic> toJson() {
