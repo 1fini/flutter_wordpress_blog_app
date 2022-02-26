@@ -153,7 +153,7 @@ class Post {
       for (var val in PostCommentStatus.values) {
         if (enumStringToName(val.toString()) == json['comment_status']) {
           commentStatus = val;
-          return;
+          break;
         }
       }
     }

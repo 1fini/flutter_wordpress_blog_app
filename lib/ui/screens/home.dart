@@ -63,7 +63,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(9),
                       child: Image.network(
-                        "${snapshot.data?[0].lLinks?.wpFeaturedmedia?.first.href}",
+                        "https://www.parentsimpliques.fr/wp-content/uploads/2021/10/6C5DAC1B-E4B0-4701-A5C9-24EFAFF134D2.png",
+                        // "${snapshot.data?[0].lLinks?.wpAttachment?.first.attachment?.sourceUrl}",
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -86,7 +87,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         // author: "${snapshot.data?[i].author?.firstName}",
                         author: "Dan",
                         image:
-                            "${snapshot.data?[i].lLinks?.wpAttachment?.first.href}",
+                            "https://www.parentsimpliques.fr/wp-content/uploads/2021/10/6C5DAC1B-E4B0-4701-A5C9-24EFAFF134D2.png",
                         title: "${snapshot.data?[i].title?.rendered}",
                         onTap: () => Navigator.push(
                           context,
@@ -114,9 +115,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           itemBuilder: (context, i) => PostContainer(
                             author: "Dan",
                             // author: "${snapshot.data?[i].author?.firstName}",
-                            image: snapshot.data?[i].lLinks?.wpFeaturedmedia
-                                    ?.first.href ??
-                                "",
+                            image:
+                                "https://www.parentsimpliques.fr/wp-content/uploads/2021/10/6C5DAC1B-E4B0-4701-A5C9-24EFAFF134D2.png",
                             title: "${snapshot.data?[i].title?.rendered}",
                             onTap: () => Navigator.push(
                               context,

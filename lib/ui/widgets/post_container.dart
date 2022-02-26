@@ -19,7 +19,8 @@ class PostContainer extends StatelessWidget {
         onTap: onTap,
         leading: ClipRRect(
           borderRadius: BorderRadius.circular(9.0),
-          child: Image.network(image),
+          child: Image.network(
+              /*image*/ "https://www.parentsimpliques.fr/wp-content/uploads/2021/10/6C5DAC1B-E4B0-4701-A5C9-24EFAFF134D2-150x150.png"),
         ),
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

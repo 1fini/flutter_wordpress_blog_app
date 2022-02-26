@@ -45,7 +45,8 @@ class OverlayedContainer extends StatelessWidget {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(3),
                     child: Image.network(
-                      authorAvatar,
+                      // authorAvatar,
+                      "https://www.parentsimpliques.fr/wp-content/uploads/2021/10/6C5DAC1B-E4B0-4701-A5C9-24EFAFF134D2-150x150.png",
                       fit: BoxFit.cover,
                     ),
                   ),

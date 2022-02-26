@@ -17,7 +17,8 @@ class PostScreen extends StatelessWidget {
               Positioned.fill(
                 bottom: MediaQuery.of(context).size.height * .55,
                 child: Image.network(
-                  postData.lLinks?.wpAttachment?.first.href ?? "",
+                  "https://www.parentsimpliques.fr/wp-content/uploads/2021/10/6C5DAC1B-E4B0-4701-A5C9-24EFAFF134D2.png",
+                  // postData.lLinks?.wpAttachment?.first.href ?? "",
                   fit: BoxFit.cover,
                 ),
               ),
@@ -63,7 +64,7 @@ class PostScreen extends StatelessWidget {
                       children: <Widget>[
                         ListTile(
                           leading: Image.network(
-                            postData.attachments?.first.sourceUrl ?? '',
+                            "https://www.parentsimpliques.fr/wp-content/uploads/2021/10/6C5DAC1B-E4B0-4701-A5C9-24EFAFF134D2.png",
                             height: 35,
                             width: 35,
                             fit: BoxFit.cover,
